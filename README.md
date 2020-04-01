@@ -17,7 +17,7 @@ git push prod
 Add fonts in the `fonts` directory and run:
 
 ```bash
-tar -czvf fonts.tar.gz ./fonts/
+cd fonts && tar -czvf fonts.tar.gz * && cd .. && mv fonts/fonts.tar.gz .
 ```
 
 Commit, push, redeploy. That's it!
