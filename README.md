@@ -1,23 +1,23 @@
-# heroku-buildpack-system-fonts
+# fonts-buildpack
 
-This buildpack makes it easy to install system fonts on Heroku [stacks](https://devcenter.heroku.com/articles/stack).
+This buildpack makes it easy to install Kactus fonts on Heroku [stacks](https://devcenter.heroku.com/articles/stack).
 
 ## Install
 
 ```bash
 # Add the buildpack
-heroku buildpacks:add --index 2 https://github.com/hopkinschris/heroku-buildpack-system-fonts.git
+heroku buildpacks:add https://github.com/kacty/fonts-buildpack.git -a <app-name>
 
-#Deploy
-git push heroku master
+# Deploy
+git push prod
 ```
 
 ## Building
+
+Add fonts in the `fonts` directory and run:
 
 ```bash
 tar -czvf fonts.tar.gz ./fonts/
 ```
 
-| Fonts   |
-| ------- |
-| ✓ Arial |
+Commit, push, redeploy. That's it!
