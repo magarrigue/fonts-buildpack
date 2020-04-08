@@ -12,9 +12,7 @@ BUILD_DIR="$1"
 SOURCE_DIR="$(dirname $0)/../fonts.tar.gz"
 TARGET_DIR="$BUILD_DIR/.fonts"
 
-echo "-----> Extracting fonts to $TARGET_DIR"
-
 mkdir -p "$TARGET_DIR"
-tar -xvzf "$SOURCE_DIR" -C "$TARGET_DIR" | indent
+tar -xzf "$SOURCE_DIR" -C "$TARGET_DIR" | indent
 
-fc-cache -fv
+fc-cache -fv > /dev/null
